@@ -5,7 +5,7 @@ import Sidebar from '@/components/core/Sidebar'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Graph',
+  title: 'Dashboard',
   description: '',
 }
 
@@ -19,8 +19,10 @@ export default function layout({
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <Sidebar />
       <div className="flex flex-col sm:gap-4 sm:pb-4 sm:pl-14">
-        <Header />
-        {children}
+        <div className="flex min-h-screen w-full flex-col">
+            <Header />
+            {children}
+        </div>
       </div>
     </div>
   )

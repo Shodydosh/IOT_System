@@ -3,10 +3,9 @@ import * as React from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import {
-  Home,
-  ScanSearch,
+  LayoutDashboard,
+  MonitorSmartphone,
   ChartPie,
-  Package2,
   Settings,
   ChartNetwork,
   ScrollText,
@@ -33,82 +32,50 @@ const Sidebar: React.FC = () => {
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-              href="/home"
+              href="/dashboard"
               className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base ${
-                isActive('/home')
+                isActive('/dashboard')
                   ? 'bg-primary text-primary-foreground'
                   : 'text-muted-foreground'
               }`}
             >
-              <Home className="h-5 w-5" />
-              <span className="sr-only">Home</span>
+              <LayoutDashboard className="h-5 w-5" />
+              <span className="sr-only">Dashboard</span>
             </Link>
           </TooltipTrigger>
-          <TooltipContent side="right">Home</TooltipContent>
+          <TooltipContent side="right">Dashboard</TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-              href="/investigate"
+              href="/manager"
               className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base ${
-                isActive('/investigate')
+                isActive('/manager')
                   ? 'bg-primary text-primary-foreground'
                   : 'text-muted-foreground'
               }`}
             >
-              <ScanSearch className="h-5 w-5" />
-              <span className="sr-only">Investigate</span>
+              <MonitorSmartphone className="h-5 w-5" />
+              <span className="sr-only">Manager</span>
             </Link>
           </TooltipTrigger>
-          <TooltipContent side="right">Investigate</TooltipContent>
+          <TooltipContent side="right">Manager</TooltipContent>
         </Tooltip>
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-              href="/graph"
+              href="/analysis"
               className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base ${
-                isActive('/graph')
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground'
-              }`}
-            >
-              <ChartNetwork className="h-5 w-5" />
-              <span className="sr-only">Graph</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Graph</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="/stories"
-              className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base ${
-                isActive('/stories')
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground'
-              }`}
-            >
-              <ScrollText className="h-5 w-5" />
-              <span className="sr-only">Stories</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Stories</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="/chart"
-              className={`group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full text-lg font-semibold md:h-8 md:w-8 md:text-base ${
-                isActive('/chart')
+                isActive('/analysis')
                   ? 'bg-primary text-primary-foreground'
                   : 'text-muted-foreground'
               }`}
             >
               <ChartPie className="h-5 w-5" />
-              <span className="sr-only">Chart</span>
+              <span className="sr-only">Analysis</span>
             </Link>
           </TooltipTrigger>
-          <TooltipContent side="right">Chart</TooltipContent>
+          <TooltipContent side="right">Analysis</TooltipContent>
         </Tooltip>
       </nav>
 
